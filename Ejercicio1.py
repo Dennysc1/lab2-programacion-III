@@ -1,5 +1,6 @@
+# Ejercicio 1
 class Perro:
-    def __init__(self):
+    def __init__(self): # aqui se definen las caracteristicas que utilizaremos
         self.nombre = ""
         self.peso = 0
         self.raza = ""
@@ -8,20 +9,20 @@ class Perro:
         self.estado = "no atendido"
         self.tipo = ""
     
-    def registrar(self,nombre,peso,raza,color,edad):
+    def registrar(self,nombre,peso,raza,color,edad): # espacio para el registro de las caracteristicas
         self.nombre = nombre
         self.peso = peso
         self.raza = raza
         self.color = color
         self.edad = edad
         self.estado = "atendido"
-        if peso > 10:
+        if peso > 10: # condicional para el tipo de perro segun su peso
             self.tipo = "Perro grande"
         else:
             self.tipo = "Perro pequeño"
 
     def info(self):
-        return ("############################\n"
+        return ("############################\n" # impresion de la informacion del perro
                 "Informacion de la mascota\n"
                 f"Nombre: {self.nombre}\n"
                 f"Peso: {self.peso} kg\n"
@@ -33,13 +34,13 @@ class Perro:
                 "############################")
 
 mascota = Perro()
-print("Ingrese los datos de su mascota.")
+print("Ingrese los datos de su mascota.") # ingreso de datos del usuario
 nombre = input("Nombre: ")
 peso = float(input("Peso (kg): "))
 raza = input("Raza: ")
 color = input("Color: ")
 edad = int(input("Edad: "))  
 
-mascota.registrar(nombre, peso, raza, color, edad)
+mascota.registrar(nombre, peso, raza, color, edad) # envio de datos al registro
 
-print(mascota.info())  
+print(mascota.info())  # impresion de datos
